@@ -1,7 +1,6 @@
 ## cheesy - the simple terminal emulator
 
-![Screenshot of cheesy running under Cinnamon]
-(https://gentlemanbytes.com/cheesy-screenshot.png)
+![Screenshot of cheesy running under Cinnamon](https://gentlemanbytes.com/cheesy-screenshot.png)
 
 ### What is cheesy?
 cheesy is a simple terminal emulator designed for simplicity - and mainly for my own
