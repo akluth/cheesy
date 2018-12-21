@@ -78,6 +78,18 @@ int main(int argc, char *argv[])
 gboolean on_key_press (GtkWidget *widget, GdkEventKey *event, gpointer user_data)
 {
     switch (event->keyval) {
+        case GDK_KEY_V:
+            if (event->state == (GDK_CONTROL_MASK | GDK_SHIFT_MASK)) {
+                vte_terminal_paste_clipboard(VTE_TERMINAL(widget));
+            }
+            break;
+
+        case GDK_KEY_C:
+            if (event->state == (GDK_CONTROL_MASK | GDK_SHIFT_MASK)) {
+                vte_terminal_copy_clipboard_format(VTE_TERMINAL(widget), VTE_FORMAT_TEXT);
+            }
+            break;
+
         case GDK_KEY_F1:
             vte_terminal_set_colors(
                 VTE_TERMINAL(widget),
