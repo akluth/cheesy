@@ -1,0 +1,37 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define to 1 if you have the `cairo' library (-lcairo). */
+#undef HAVE_LIBCAIRO
+
+/* Define to 1 if you have the `gdk-3' library (-lgdk-3). */
+#undef HAVE_LIBGDK_3
+
+/* Define to 1 if you have the `gnutls' library (-lgnutls). */
+#undef HAVE_LIBGNUTLS
+
+/* Define to 1 if you have the `gtk-3' library (-lgtk-3). */
+#undef HAVE_LIBGTK_3
+
+/* Define to 1 if you have the `vte-2.91' library (-lvte-2.91). */
+#undef HAVE_LIBVTE_2_91
+
+/* Define to 1 if you have the `z' library (-lz). */
+#undef HAVE_LIBZ
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
