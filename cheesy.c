@@ -11,7 +11,10 @@
                                     .blue = CLR_16(CLR_B(x)), \
                                     .alpha = 0.0 }
 
+static float alpha = 0.85;
+
 gboolean on_key_press (GtkWidget *widget, GdkEventKey *event, gpointer user_data);
+int compare_float(float f1, float f2);
 
 int main(int argc, char *argv[])
 {
@@ -90,6 +93,34 @@ gboolean on_key_press (GtkWidget *widget, GdkEventKey *event, gpointer user_data
             }
             break;
 
+        case GDK_KEY_equal:
+            if (event->state & GDK_CONTROL_MASK) {
+                if (compare_float(alpha, 1.00f)) {
+                    return FALSE;
+                }
+
+                alpha += 0.05;
+                vte_terminal_set_color_background(
+                    VTE_TERMINAL(widget),
+                    &(GdkRGBA){ .alpha = alpha }
+                );
+            }
+            break;
+
+        case GDK_KEY_minus:
+            if (event->state & GDK_CONTROL_MASK) {
+                if (compare_float(alpha, 0.05f)) {
+                    return FALSE;
+                }
+
+                alpha -= 0.05;
+                vte_terminal_set_color_background(
+                    VTE_TERMINAL(widget),
+                    &(GdkRGBA){ .alpha = alpha }
+                );
+            }
+            break;
+
         case GDK_KEY_F1:
             vte_terminal_set_colors(
                 VTE_TERMINAL(widget),
@@ -119,4 +150,16 @@ gboolean on_key_press (GtkWidget *widget, GdkEventKey *event, gpointer user_data
     }
 
   return FALSE; 
+}
+
+int compare_float(float f1, float f2)
+{
+    float precision = 0.01;
+
+    if (((f1 - precision) < f2) &&
+        ((f1 + precision) > f2)) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
