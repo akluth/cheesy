@@ -11,6 +11,6 @@ install:
 	gtk-update-icon-cache
 
 clean:
-	rm *.o 
+	rm cheesy *.o 
 
 .PHONY: all cheesy clean
