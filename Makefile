@@ -5,6 +5,10 @@ cheesy:
 
 install:
 	cp cheesy /usr/local/bin/cheesy
+	cp cheesy.png /usr/share/icons/hicolor/48x48/apps
+	cp cheesy.desktop /usr/share/applications
+	touch /usr/share/icons/hicolor
+	gtk-update-icon-cache
 
 clean:
 	rm *.o 

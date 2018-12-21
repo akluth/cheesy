@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+Type=Application
+Name=Cheesy
+Icon=cheesy.png
+StartupNotify=true
+Exec=/usr/local/bin/cheesy
