@@ -1,3 +1,8 @@
 .vscode
 *.o
 cheesy
+autom4te.cache
+autoscan.log
+config.log
+config.h.in~
+config.h.in
