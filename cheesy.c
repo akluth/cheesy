@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     GdkVisual *visual;
 
     screen = gtk_widget_get_screen (GTK_WIDGET (window));
-    visual = gdk_screen_get_rgba_visual (screen);
+    visual = gdk_screen_get_rgba_visual(screen);
 
     if (gdk_screen_is_composited (screen) &&
         (visual = gdk_screen_get_rgba_visual (screen)) != NULL) {
